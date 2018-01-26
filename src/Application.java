@@ -2,14 +2,12 @@
 public class Application {
 
 	public static void main(String[] args) {
-		int value = 0;
 		
-		while(value < 10 ) {
-			System.out.println("Hello" + value);
+		for(int i=1; i<11; i++) {
 			
-			value += 1; 
+			System.out.printf("the value is: %d\n", i);
+			
 		}
-		
 	}
 
 }
