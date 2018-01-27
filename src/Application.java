@@ -1,13 +1,18 @@
+import java.util.Scanner;
 
 public class Application {
 
 	public static void main(String[] args) {
 		
-		for(int i=1; i<11; i++) {
-			
-			System.out.printf("the value is: %d\n", i);
-			
-		}
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Podaj has³o: ");
+		String line = input.nextLine();
+		System.out.println("Has³o to: " + line);
+		
+		
+		
+		
+		
 	}
-
 }
