@@ -5,14 +5,14 @@ public class Application {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
+		double number;
 		
-		System.out.println("Podaj has³o: ");
-		String line = input.nextLine();
-		System.out.println("Has³o to: " + line);
+		do {
+			System.out.println("Enter a number: ");
+			number = input.nextDouble();
+		} while( number != 5);
 		
-		
-		
-		
+		System.out.println("Mamy to, jest 5!!!!!!");
 		
 	}
 }
