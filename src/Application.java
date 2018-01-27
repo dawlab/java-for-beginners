@@ -5,14 +5,23 @@ public class Application {
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
-		double number;
+		int number;
 		
-		do {
-			System.out.println("Enter a number: ");
-			number = input.nextDouble();
-		} while( number != 5);
+		System.out.println("Enter a number: ");
+		number = input.nextInt();
 		
-		System.out.println("Mamy to, jest 5!!!!!!");
+		switch(number) {
+		
+		case 1: 
+			System.out.println("wybra³eœ 1");
+			break;
+		
+		case 2: 
+			System.out.println("wybra³eœ 2");
+			break;
+		default: 
+			System.out.println("Odpowiedz standardowa");
+		}
 		
 	}
 }
