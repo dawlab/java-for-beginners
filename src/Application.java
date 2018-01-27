@@ -4,14 +4,22 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		String[] words = new String[2];
+		int[] [] grid = {
+				
+				{1,2,3},
+				{1,2,3},
+				{6,7,8}
+		};
 		
-		words[0] = "Karolina";
-		words[1] = "Ola";
-		
-		for (int i=0; i < words.length; i++) {
+		for (int row=0; row < grid.length; row++) {
+			for (int col=0; col < grid[row].length; col++) {
+				System.out.println(grid[row][col] + "\t");
+			}
 			
-			System.out.println(words[i]);
+			System.out.println();
 		}
+		
 	}
+	
+	
 }
