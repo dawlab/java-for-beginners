@@ -4,24 +4,14 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		int[] values = new int[4];
+		String[] words = new String[2];
 		
-		Scanner input = new Scanner(System.in);
-		int number;
-		int i = 0;
+		words[0] = "Karolina";
+		words[1] = "Ola";
 		
-		while (i < values.length) {
+		for (int i=0; i < words.length; i++) {
 			
-			System.out.println("Type a number: ");
-			
-			number = input.nextInt();
-			
-			values[i] = number;
-			
-			i += 1;
-			
+			System.out.println(words[i]);
 		}
-		
-		System.out.println(values[0] + " " + values[1] + " " + values[2] + " " + values[3]);
 	}
 }
