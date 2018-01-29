@@ -1,54 +1,31 @@
-
-
-interface Infor {
-	
-	void showInfo();
-}
-
-class Pracownik implements Infor {
-	@Override
-	public void showInfo() {
-		
-		System.out.println(imie + ", " + nazwisko + ", " + wiek);
-		
-	}
-
-	String imie;
-	String nazwisko; 
-	int wiek; 
-	
-	Pracownik(String imie, String nazwisko, int wiek) {
-		this.imie = imie; 
-		this.nazwisko = nazwisko;
-		this.wiek = wiek;
-	}
-	
-}
-
-class Programista extends Pracownik implements Infor {
-	String jezykProgramowania; 
-	
-	Programista(String imie, String nazwisko, int wiek, String jezykProgramowania) {
-		super(imie, nazwisko, wiek);
-		this.jezykProgramowania = jezykProgramowania;
-	}
-
-	@Override
-	public void showInfo() {
-		
-		System.out.println(imie + ", " +  nazwisko + ", " + wiek + ", " + jezykProgramowania);
-	}
-	
-}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
  
-public class App{
-  public static void main(String[] args) {
-	 
-	  Pracownik adam = new Pracownik("Adam", "Zagórski", 32);
-	  Programista jarek = new Programista("Jarek", "Pypko", 26, "Java Core");
-	  
-	  adam.showInfo();
-	  jarek.showInfo();
-	 
+public class App {
+  public static void main(String[] args){
+      int tab[] = {1,2,3,4,5};
+      BufferedReader odczyt = new BufferedReader(new InputStreamReader(System.in));
+      int index = -1;
+ 
+      System.out.println("Który element tablicy chcesz zobaczyæ: ");
+      boolean czyPoprawne = false;
+ 
+      while(!czyPoprawne) {
+          try {
+          index = Integer.parseInt(odczyt.readLine());
+          } catch (NumberFormatException n) { System.out.println("Niepoprawne dane! " +
+                "\n Który element tablicy chcesz zobaczyæ: ");
+          } catch (IOException e) { System.out.println("B³¹d odczytu danych");
+          }
+ 
+          czyPoprawne = index == -1? false : true;
+      }
+ 
+      try {
+          System.out.println(tab[index-1]);
+      } catch (ArrayIndexOutOfBoundsException e) {
+          System.out.println("Niepoprawny parametr, rozmiar tablicy to: "+tab.length);
+      }
   }
 }
