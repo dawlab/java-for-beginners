@@ -5,15 +5,15 @@ import java.util.Scanner;
  
 public class App{
   public static void main(String[] args) throws FileNotFoundException{
-    
-	  PrintWriter zapis = new PrintWriter("ala.txt.txt");
 	  
-	  zapis.println("zapis do pliku");
-	  zapis.close();
+	  int liczby[] = {1,2,3,4,5,6,7,8,9,10};
 	  
-	  File plik = new File("ala.txt.txt");
-	  Scanner odczyt = new Scanner(plik);
-	  System.out.println(odczyt.nextLine());
+	  for (int x : liczby) {
+		  System.out.println(x);
+	 
 	  
+	  /*for(int i=0; i<liczby.length; i++) {
+		  System.out.println(liczby[i]);
+	  }*/
   }
 }
